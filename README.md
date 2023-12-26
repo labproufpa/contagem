@@ -8,8 +8,8 @@ O código é baseado no trabalho desenvolvido em [Nimbus](https://github.com/AST
 
 ## Requisitos
 
- - Raspberry Pi 3
- - Web Cam
+- Raspberry Pi 3
+- Web Cam
 
 ## Instalação
 
