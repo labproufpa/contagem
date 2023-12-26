@@ -1,7 +1,6 @@
 from ultralytics import YOLO
 import cv2
 import schedule
-import os
 import yaml
 import requests
 import json
