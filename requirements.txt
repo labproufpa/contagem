@@ -1,5 +1,4 @@
 ultralytics
 cv2
 schedule
-os
 pyyaml
