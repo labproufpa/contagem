@@ -1,2 +1,4 @@
 captureInterval: 4
 publishInterval: 60
+tbHost: "YOUR-HOST-HERE"
+accToken: "YOUR-TOKEN-HERE"
