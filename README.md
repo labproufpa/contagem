@@ -13,7 +13,9 @@ O código é baseado no trabalho desenvolvido em [Nimbus](https://github.com/AST
 
 ## Instalação
 
-``` pip install -m requirements.txt ```
+Instale as dependências usando ``` pip install -m requirements.txt ```
+
+Renomeie o arquivo ```config-exemplo.yaml``` para ```config.yaml```.
 
 ## Instruções de uso
 
@@ -21,4 +23,4 @@ O código é baseado no trabalho desenvolvido em [Nimbus](https://github.com/AST
 
 Por padrão a captura é feita a cada **4 segundos** e o número de pessoas detectadas pelo modelo YOLO é armazenada. Uma média do número de pessoas detectadas é enviada a cada **60 segundos**. Desta forma, suaviza-se os efeitos da variação de detecção causados pela movimentação no ambiente.
 
-Os tempos de captura e envio podem ser modificados.
+Os tempos de captura e envio podem ser modificados. Para isso, modifique o arquivo config.yaml.
