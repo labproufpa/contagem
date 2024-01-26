@@ -1,4 +1,4 @@
 ultralytics
-cv2
+opencv-python
 schedule
 pyyaml
