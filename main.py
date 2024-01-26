@@ -44,7 +44,7 @@ class Counter():
             self.predictions.append(cnt)
 
     def sendCount(self) -> None:
-        if (len(self.predictions) == self.imgMax): # if there's not enough samples to calculate mean
+        if (len(self.predictions) == self.imgMax): # checks if there is enough samples to calculate mean
             cntMean = round(sum(self.predictions)/len(self.predictions))
             print(f'Mean of predicted people in the last {self.imgMax} images is {cntMean}')
             

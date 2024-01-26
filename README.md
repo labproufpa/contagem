@@ -13,7 +13,7 @@ O código é baseado no trabalho desenvolvido por [Nimbus](https://github.com/AS
 
 ## Instalação
 
-Instale as dependências usando ``` pip install -m requirements.txt ```
+Instale as dependências usando ``` pip install -r requirements.txt ```
 
 Renomeie o arquivo ```config-exemplo.yaml``` para ```config.yaml```.
 
