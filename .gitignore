@@ -1,3 +1,4 @@
+__pycache__/
 yolov8x.pt
 config.yaml
 image.png
