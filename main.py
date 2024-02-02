@@ -36,9 +36,10 @@ class Counter():
 
     def captureImage(self) -> None:
         ret, self.frame = self.cam.read()
+        cv2.imwrite("image.png", self.frame)
 
     def countPeople(self) -> None:
-        results = self.model(self.frame, classes=0, conf=0.4, verbose=False) # predict humans on image with minimum confidence of 0.4
+        results = self.model("image.png", classes=0, conf=0.4, verbose=False) # predict humans on image with minimum confidence of 0.4
         for result in results:
             cnt = result.boxes.cls.tolist().count(0)
             self.predictions.append(cnt)
