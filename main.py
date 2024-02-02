@@ -57,7 +57,7 @@ class Counter():
             self.predictions = [] # resets predicted array
  
 try:
-    with open(f'config.yaml','r') as f:
+    with open(f'conf/config.yaml','r') as f:
         config = yaml.safe_load(f)
         capint = config["captureInterval"]
         pubint = config["publishInterval"]
