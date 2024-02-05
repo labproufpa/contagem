@@ -1,10 +1,7 @@
 from .baseCounter import baseCounter
 from ultralytics import YOLO
 import cv2
-import requests
-import json
 import time
-import base64
 
 class devCounter(baseCounter):
 
