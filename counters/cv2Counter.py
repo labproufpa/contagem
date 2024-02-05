@@ -9,7 +9,7 @@ import base64
 class cv2Counter(baseCounter):
 
     def __init__(self, capint = 4, pubint = 60, host = None, token = None, sendImage = False) -> None:
-        super(cv2Counter, self).__init__(capint,pubint,host,token)
+        super(cv2Counter, self).__init__(capint,pubint,host,token,sendImage)
         self.model = YOLO("yolov8x.pt")
         self.cam = cv2.VideoCapture(0)
     

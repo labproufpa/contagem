@@ -1,5 +1,5 @@
 import yaml
-from counters import cv2Counter
+from counters import cv2Counter, devCounter
 
 try:
     with open(f'conf/config.yaml','r') as f:
@@ -15,11 +15,6 @@ except FileNotFoundError:
 except KeyError:
     print("Configuration error, please check config.yaml file")
 
-if sendImage:
-    print(1)
-else:
-    print(2)
-
 match mode:
     case 'cv2':
         counter = cv2Counter(capint,pubint,host,token,sendImage)
@@ -27,6 +22,8 @@ match mode:
     case 'pi':
         print(mode+" mode not implemented yet")
     case 'dev':
-        print(mode+" mode not implemented yet")
+        print("Started development mode")
+        counter = devCounter()
+        counter.do()
     case _:
         print("Please choose an allowed mode")
