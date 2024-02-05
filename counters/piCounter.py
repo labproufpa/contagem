@@ -7,10 +7,10 @@ import json
 import time
 import base64
 
-class cv2Counter(baseCounter):
+class piCounter(baseCounter):
 
     def __init__(self, capint = 30, pubint = 60, host = None, token = None, sendImage = False) -> None:
-        super(cv2Counter, self).__init__(capint,pubint,host,token,sendImage)
+        super(piCounter, self).__init__(capint,pubint,host,token,sendImage)
         self.model = YOLO("yolov8x.pt")
         self.cam = Picamera2()
         self.cam.start()
