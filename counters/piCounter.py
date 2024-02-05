@@ -6,6 +6,7 @@ import requests
 import json
 import time
 import base64
+import schedule
 
 class piCounter(baseCounter):
 
@@ -14,9 +15,19 @@ class piCounter(baseCounter):
         self.model = YOLO("yolov8x.pt")
         self.cam = Picamera2()
         self.cam.start()
+
+    def do(self) -> None:
+        schedule.every(self.captureInterval).seconds.do(self.process)
+        run  = True
+        try:
+            while run:
+                schedule.run_pending()
+        except KeyboardInterrupt:
+            run = False
+        self.cam.close()
     
     def captureImage(self) -> None:
-        self.cam.capture_file("image.jpg")
+        self.cam.capture_file("image.png")
 
     def countPeople(self) -> None:
         results = self.model("image.png", classes=0, conf=0.4, verbose=False) # predict humans on image with minimum confidence of 0.4

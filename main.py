@@ -16,10 +16,13 @@ except KeyError:
     print("Configuration error, please check config.yaml file")
 
 if mode == 'cv2':
+    print("Started cv2 mode")
     counter = cv2Counter(capint,pubint,host,token,sendImage)
     counter.do()
 elif mode == 'pi':
-    print(mode+" mode not implemented yet")
+    print("Started pi mode")
+    counter = piCounter(capint,pubint,host,token,sendImage)
+    counter.do()
 elif mode == 'dev':
     print("Started development mode")
     counter = devCounter()
