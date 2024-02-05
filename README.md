@@ -31,6 +31,8 @@ Por padrão a captura no modo ```cv2``` é feita a cada **4 segundos** e o núme
 
 No modo ```pi``` a captura é feita, por padrão, a cada **30 segundos** e os envios a cada **60 segundos**. Os tempos de captura e envio, exceto no modo ```dev```, podem ser modificados. Para isso, modifique o arquivo ```config.yaml```.
 
+O código permite o envio da última imagem adquirida pela câmera para o Thingsboard. Para uso desta funcionalidade use a opção ```sendImage``` como ```true``` no arquivo de configuração.
+
 ## Instruções de uso
 
 ``` python3 main.py ```
