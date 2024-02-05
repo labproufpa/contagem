@@ -2,3 +2,5 @@ captureInterval: 4
 publishInterval: 60
 tbHost: "YOUR-HOST-HERE"
 accToken: "YOUR-TOKEN-HERE"
+mode: "dev" #choose one from {dev,cv2,pi}
+sendImage: false

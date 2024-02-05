@@ -3,7 +3,7 @@ from abc import ABC, abstractmethod
 
 class baseCounter(ABC):
 
-    def __init__(self, capint = 4, pubint = 60, host = None, token = None) -> None:
+    def __init__(self, capint = 4, pubint = 60, host = None, token = None, sendImage = False) -> None:
         self.model = None
         self.cam = None
         self.frame =  None
@@ -13,6 +13,7 @@ class baseCounter(ABC):
         self.imgMax = self.publishInterval/self.captureInterval
         self.host = host
         self.accessToken = token
+        self.sendImage = sendImage
 
     def process(self) -> None:
         self.captureImage()
